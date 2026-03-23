@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 60px 20px 40px;
+  padding: 100px 20px 60px;
 }
 
 .title {
@@ -102,8 +102,8 @@
   padding: 16px 40px;
 }
 .features {
-  padding: 60px 40px;
-  background-color: #fcfcfc;
+  padding: 100px 40px;
+  background-color: transparent;
   border-top: 1px solid #f0f0f0;
 }
 
@@ -174,8 +174,8 @@
   letter-spacing: 0.5px;
 }
 .pricing {
-  padding: 60px 40px;
-  background-color: #fff;
+  padding: 100px 40px;
+  background-color: transparent;
 }
 
 .pricingHeader {
@@ -266,8 +266,8 @@
 }
 
 .details {
-  padding: 60px 40px;
-  background-color: #fcfcfc;
+  padding: 100px 40px;
+  background-color: transparent;
 }
 
 .detailsContent {
@@ -290,8 +290,8 @@
 }
 
 .contact {
-  padding: 80px 40px;
-  background-color: #fff;
+  padding: 100px 40px;
+  background-color: transparent;
 }
 
 .contactGrid {
@@ -329,4 +329,78 @@
 .contactValue {
   color: #666;
   font-size: 15px;
+}
+
+.workflow {
+  padding: 100px 40px;
+  background-color: transparent;
+}
+
+.workflowGrid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 32px;
+}
+
+.workflowColumn {
+  padding: 40px;
+  border-radius: 32px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.workflowTag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 24px;
+}
+
+.tagSender { background: #e0f2fe; color: #0369a1; }
+.tagRecipient { background: #fef3c7; color: #92400e; }
+.tagSystem { background: #dcfce7; color: #166534; }
+
+.flowStep {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.flowStep:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  left: 11px;
+  top: 30px;
+  height: calc(100% + 12px);
+  width: 2px;
+  background: #eee;
+}
+
+.stepDot {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #fff;
+  border: 4px solid hsl(var(--primary));
+  flex-shrink: 0;
+  z-index: 1;
+}
+
+.stepContent h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.stepContent p {
+  font-size: 14px;
+  color: #666;
+  margin: 0;
 }

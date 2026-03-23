@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Allison&family=Manrope:wght@200..800&display=swap');
 
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
   --background: 0 0% 100%;
   --foreground: 240 10% 3.9%;
@@ -25,6 +29,11 @@
 
 body {
   background-color: hsl(var(--background));
+  background-image: 
+    radial-gradient(at 0% 0%, hsl(var(--primary) / 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, hsl(var(--primary) / 0.03) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, hsl(var(--primary) / 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, hsl(var(--primary) / 0.03) 0px, transparent 50%);
   color: hsl(var(--foreground));
   font-family: 'Manrope', sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -53,9 +62,11 @@ a {
 }
 
 .glass {
-  background: rgba(255, 255, 255, 0.7);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  background: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
 }
 
 .btn-primary {

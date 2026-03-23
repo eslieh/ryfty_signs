@@ -32,8 +32,8 @@ export default function Home() {
             <a key={item.name} href={item.href} className={styles.navLink}>{item.name}</a>
           ))}
           <div className={styles.navActions}>
-            <a href="#" className={styles.signIn}>Sign in</a>
-            <button className="btn-primary">Create account</button>
+            <a href="/auth/login" className={styles.signIn}>Sign in</a>
+            <a href="/auth/signup" className="btn-primary" style={{ textDecoration: "none" }}>Create account</a>
           </div>
         </div>
       </nav>
@@ -133,6 +133,122 @@ export default function Home() {
               <p className={styles.featureDesc}>{feature.desc}</p>
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Workflow Section - How it Works */}
+      <section id="workflow" className={styles.workflow}>
+        <div className={styles.pricingHeader}>
+          <motion.div {...fadeInUp}>
+            <h2>Flow of the Future</h2>
+            <p style={{ color: "#666" }}>Seamless coordination between senders and recipients.</p>
+          </motion.div>
+        </div>
+
+        <div className={styles.workflowGrid}>
+          {/* Sender Flow */}
+          <motion.div 
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.workflowColumn}
+          >
+            <div className={`${styles.workflowTag} ${styles.tagSender}`}>Sender Actions</div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} />
+              <div className={styles.stepContent}>
+                <h4>Login / Sign up</h4>
+                <p>Email + password for a secure workspace.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} />
+              <div className={styles.stepContent}>
+                <h4>Upload document</h4>
+                <p>PDF supported with AI-ready scanning.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} />
+              <div className={styles.stepContent}>
+                <h4>Place fields</h4>
+                <p>Drag signature boxes onto the canvas.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} />
+              <div className={styles.stepContent}>
+                <h4>Send to client</h4>
+                <p>Enter recipient email and hit send.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Recipient Flow */}
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className={styles.workflowColumn}
+            style={{ border: "1px solid hsl(var(--primary) / 0.1)" }}
+          >
+            <div className={`${styles.workflowTag} ${styles.tagRecipient}`}>Recipient Actions</div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#92400e" }} />
+              <div className={styles.stepContent}>
+                <h4>Email notification</h4>
+                <p>Receive a unique, secure signing link.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#92400e" }} />
+              <div className={styles.stepContent}>
+                <h4>Open signing link</h4>
+                <p>No login needed to review the document.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#92400e" }} />
+              <div className={styles.stepContent}>
+                <h4>Sign document</h4>
+                <p>Draw, type or upload your signature.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#92400e" }} />
+              <div className={styles.stepContent}>
+                <h4>Confirm identity</h4>
+                <p>Biometric or ID verification for certainty.</p>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* System Output */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className={styles.workflowColumn}
+          >
+            <div className={`${styles.workflowTag} ${styles.tagSystem}`}>System Output</div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#166534" }} />
+              <div className={styles.stepContent}>
+                <h4>Generate signed PDF</h4>
+                <p>Signature embedded with full audit logs.</p>
+              </div>
+            </div>
+            <div className={styles.flowStep}>
+              <div className={styles.stepDot} style={{ borderColor: "#166534" }} />
+              <div className={styles.stepContent}>
+                <h4>Download signed doc</h4>
+                <p>Both parties notified of completion.</p>
+              </div>
+            </div>
+            <div style={{ marginTop: "40px", textAlign: "center" }}>
+              <span className="signature" style={{ fontSize: "1.2em", color: "#166534" }}>Certified by Ryfty</span>
+            </div>
+          </motion.div>
         </div>
       </section>
 

@@ -73,7 +73,7 @@ export default function LoginPage() {
                 <div className={styles.formGroup}>
                   <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "8px" }}>
                     <label className={styles.label} style={{ margin: 0 }}>Password</label>
-                    <a href="#" className={styles.link} style={{ fontSize: "13px" }}>Forgot?</a>
+                    <Link href="/auth/forgot-password" className={styles.link} style={{ fontSize: "13px" }}>Forgot?</Link>
                   </div>
                   <input type="password" className={styles.input} placeholder="••••••••" required />
                 </div>

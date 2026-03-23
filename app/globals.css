@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Allison&family=Manrope:wght@200..800&display=swap');
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 240 10% 3.9%;
+  
+  --primary: 154 85% 45%; /* Vibrant Green from inspo */
+  --primary-foreground: 0 0% 100%;
+  
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  
+  --accent: 154 85% 45%;
+  --accent-foreground: 240 5.9% 10%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 240 10% 4%;
+
+  --border: 240 5.9% 90%;
+  --input: 240 5.9% 90%;
+  --ring: 154 85% 45%;
+
+  --signature-font: 'Allison', cursive;
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: 'Manrope', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.signature {
+  font-family: var(--signature-font);
+  color: #000;
+  font-size: 1.5em;
+  transform: rotate(-3deg);
+  display: inline-block;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-primary {
+  background-color: hsl(var(--primary));
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-secondary {
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  padding: 12px 32px;
+  font-weight: 600;
+  border: none;
+}
